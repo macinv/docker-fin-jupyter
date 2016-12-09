@@ -1,0 +1,14 @@
+name: py3
+dependencies:
+- pandas
+- numpy
+- scipy
+- requests
+- beautifulsoup4
+- pymongo
+- statsmodels
+- lz4
+- matplotlib
+- ipython
+- ipykernel 
+
