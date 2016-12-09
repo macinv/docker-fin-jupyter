@@ -10,8 +10,5 @@ env:
     - IMAGE_NAME=fin-jupyter
     - CONTAINER_NAME=fin-jupyter
 
-  services:
-    - docker
-
-  script:
-    - bash test_docker.sh
+script:
+  - bash test_docker.sh
