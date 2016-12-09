@@ -1,0 +1,17 @@
+language: python
+
+sudo: required
+
+services:
+  - docker
+
+env:
+  global:
+    - IMAGE_NAME=fin-jupyter
+    - CONTAINER_NAME=fin-jupyter
+
+  services:
+    - docker
+
+  script:
+    - bash test_docker.sh
