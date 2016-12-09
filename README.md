@@ -9,6 +9,24 @@
 
 Jupyter notebook for Finance
 
+## Pre-built kernels
+
+* Python 2 (Python 2.7)
+* Python 3 (Python 3.5)
+
+And these are the packages pre-installed in both kernels: 
+- pandas
+- numpy
+- scipy
+- requests
+- beautifulsoup4
+- pymongo
+- statsmodels
+- lz4
+- matplotlib
+- ipython
+- ipykernel 
+
 ## Run
 To run with the default configuration:
 
