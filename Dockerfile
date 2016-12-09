@@ -1,6 +1,19 @@
 FROM continuumio/anaconda
 MAINTAINER Jeff Li <jeff.li@mackenzieinvestments.com>
 
+ENV JUPYTER_HOME /home/jupyter
+
+ARG user=jupyter
+ARG group=jupyter
+ARG uid=1000
+ARG gid=1000
+
+# run the jupyter notebook with user `jupyter`, uid = 1000
+RUN groupadd -g ${gid} ${group} \
+    && useradd -d "$JUPYTER_HOME" -u ${uid} -g ${gid} -m -s /bin/bash ${user}
+
+VOLUME $JUPYTER_HOME
+
 ARG BBG_CPP_VERSION=3.8.18.1
 ARG BBG_PYTHON_VERSION=3.5.5
 
@@ -33,6 +46,8 @@ RUN chmod +x /tini
 
 # use bash
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
+USER ${user}
 # generate configs for jupyter
 RUN jupyter notebook --generate-config
 # create kernels for jupyter
@@ -47,4 +62,3 @@ EXPOSE 8888
 ENTRYPOINT ["/tini", "--"]
 
 CMD ["jupyter", "notebook"]
-
