@@ -14,7 +14,7 @@ Jupyter notebook for Finance
 * Python 2 (Python 2.7)
 * Python 3 (Python 3.5)
 
-The following packages pre-installed in both kernels: 
+The following packages have been pre-installed in both kernels: 
 - pandas
 - blpapi (Bloomberg Open API)
 - numpy
