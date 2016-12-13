@@ -23,7 +23,7 @@ RUN pip install --upgrade pip
 # install dependencies for pdf generations
 RUN apt-get install pandoc texlive texlive-latex-extra -y
 # install Bloomberg API dependenices
-RUN apt-get install -y python-dev build-essential gcc libatlas-base-dev libfreetype6-dev libx11-dev
+RUN apt-get install -y python-dev build-essential gcc libatlas-base-dev libfreetype6-dev libx11-dev libxft-dev
 # install pyodbc dependenices
 RUN apt-get install -y unixodbc unixodbc-dev tdsodbc freetds-dev sqsh
 
