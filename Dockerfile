@@ -1,19 +1,6 @@
 FROM continuumio/anaconda
 MAINTAINER Jeff Li <jeff.li@mackenzieinvestments.com>
 
-ENV JUPYTER_HOME /home/jupyter
-
-ARG user=jupyter
-ARG group=jupyter
-ARG uid=1000
-ARG gid=1000
-
-# run the jupyter notebook with user `jupyter`, uid = 1000
-RUN groupadd -g ${gid} ${group} \
-    && useradd -d "$JUPYTER_HOME" -u ${uid} -g ${gid} -m -s /bin/bash ${user}
-
-VOLUME $JUPYTER_HOME
-
 ARG BBG_CPP_VERSION=3.8.18.1
 ARG BBG_PYTHON_VERSION=3.5.5
 
@@ -47,22 +34,21 @@ RUN chmod +x /tini
 # use bash
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
-USER ${user}
 # generate configs for jupyter
 RUN jupyter notebook --generate-config
 
-USER root
 # create kernels for jupyter
 COPY environments/* /tmp/
 RUN conda env create -f /tmp/env-py3.yml
 RUN conda env create -f /tmp/env-py2.yml
-USER ${user}
 RUN source activate py3 && python -m ipykernel install --user --name py3 --display-name "Python 3" && source deactivate py3
 RUN source activate py2 && python -m ipykernel install --user --name py2 --display-name "Python 2" && source deactivate py2
 
 EXPOSE 8888
 
-WORKDIR $JUPYTER_HOME
+WORKDIR /workspace
+
+VOLUME /workspace
 
 ENTRYPOINT ["/tini", "--"]
 
