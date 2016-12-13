@@ -1,14 +1,18 @@
 name: py3
+channels:
+  - macinv
 dependencies:
-- pandas
-- numpy
-- scipy
-- requests
-- beautifulsoup4
-- pymongo
-- statsmodels
-- lz4
-- matplotlib
-- ipython
-- ipykernel 
-
+  - python=3.5
+  - blpapi=3.5.5
+  - pandas
+  - numpy
+  - scipy
+  - scikit-learn
+  - requests
+  - beautifulsoup4
+  - pymongo
+  - statsmodels
+  - lz4
+  - matplotlib
+  - ipython
+  - ipykernel
