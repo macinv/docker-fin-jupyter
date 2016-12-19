@@ -28,6 +28,7 @@ Both kernels come with the following packages preinstalled:
 - matplotlib
 - ipython
 - ipykernel 
+- ipywidgets
 
 ## Also installed
 

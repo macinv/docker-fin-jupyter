@@ -11,4 +11,4 @@ env:
     - CONTAINER_NAME=fin-jupyter
 
 script:
-  - bash test_docker.sh
+  - travis_retry bash test_docker.sh

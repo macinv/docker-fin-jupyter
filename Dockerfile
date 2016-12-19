@@ -8,7 +8,7 @@ RUN apt-get update -y
 RUN pip install --upgrade pip
 
 # install dependencies for pdf generations
-RUN apt-get install pandoc texlive texlive-latex-extra -y
+RUN apt-get install -y pandoc texlive texlive-latex-extra
 # install Bloomberg API dependenices
 RUN apt-get install -y python-dev build-essential gcc libatlas-base-dev libfreetype6-dev libx11-dev libxft-dev
 # install pyodbc dependenices
@@ -31,7 +31,7 @@ ENV TINI_VERSION v0.13.1
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +x /tini
 
-# use bash
+# use bash instead of sh
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # generate configs for jupyter
