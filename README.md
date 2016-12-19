@@ -14,7 +14,7 @@ Jupyter notebook for Finance
 * Python 2 (Python 2.7)
 * Python 3 (Python 3.5)
 
-The following packages have been pre-installed in both kernels: 
+Both kernels come with the following packages preinstalled:
 - pandas
 - blpapi (Bloomberg Open API)
 - numpy
@@ -28,6 +28,11 @@ The following packages have been pre-installed in both kernels:
 - matplotlib
 - ipython
 - ipykernel 
+
+## Also installed
+
+* blpapi c++ and Python in conda's root environment
+* depedencies for exporting notebooks as pdf files
 
 ## Run
 Jupyter runs on 8888 by default, to run it with the default configurations:

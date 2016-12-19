@@ -1,5 +1,6 @@
 name: py2
 channels:
+  - conda-forge
   - macinv
 dependencies:
   - python=2.7

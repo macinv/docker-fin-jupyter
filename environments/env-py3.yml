@@ -1,5 +1,6 @@
 name: py3
 channels:
+  - conda-forge
   - macinv
 dependencies:
   - python=3.5
