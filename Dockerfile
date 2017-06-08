@@ -37,7 +37,7 @@ RUN chmod +x /tini
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # generate configs for jupyter
-RUN jupyter notebook --generate-config
+RUN jupyter notebook --generate-config --allow-root
 
 # create kernels for jupyter
 COPY environments/* /tmp/
@@ -57,4 +57,4 @@ VOLUME /workspace
 
 ENTRYPOINT ["/tini", "--"]
 
-CMD ["jupyter", "notebook"]
+CMD ["jupyter", "notebook", "--allow-root"]
