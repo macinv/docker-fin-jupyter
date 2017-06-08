@@ -6,6 +6,7 @@ ARG BBG_PYTHON_VERSION=3.5.5
 
 RUN apt-get update -y
 RUN pip install --upgrade pip
+RUN pip install jupyter
 
 # install dependencies for pdf generations
 RUN apt-get install -y pandoc texlive texlive-latex-extra
