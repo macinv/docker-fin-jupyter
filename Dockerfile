@@ -6,7 +6,6 @@ ARG BBG_PYTHON_VERSION=3.5.5
 
 RUN apt-get update -y
 RUN pip install --upgrade pip
-RUN pip install jupyter
 
 # install dependencies for pdf generations
 RUN apt-get install -y pandoc texlive texlive-latex-extra
@@ -14,6 +13,8 @@ RUN apt-get install -y pandoc texlive texlive-latex-extra
 RUN apt-get install -y python-dev build-essential gcc libatlas-base-dev libfreetype6-dev libx11-dev libxft-dev
 # install pyodbc dependenices
 RUN apt-get install -y unixodbc unixodbc-dev tdsodbc freetds-dev sqsh
+
+RUN pip install jupyter
 
 # Install Bloomberg C++ API
 RUN wget --directory-prefix=/tmp/ https://bloomberg.bintray.com/BLPAPI-Stable-Generic/blpapi_cpp_$BBG_CPP_VERSION-linux.tar.gz
