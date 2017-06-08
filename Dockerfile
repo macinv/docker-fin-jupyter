@@ -47,7 +47,7 @@ RUN source activate py3 && python -m ipykernel install --user --name py3 --displ
 RUN source activate py2 && python -m ipykernel install --user --name py2 --display-name "Python 2" && source deactivate py2
 
 RUN apt-get clean
-RUN mv -rf /tmp/*
+RUN rm -rf /tmp/*
 
 EXPOSE 8888
 
