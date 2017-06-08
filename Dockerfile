@@ -1,4 +1,4 @@
-FROM continuumio/anaconda
+FROM continuumio/miniconda
 MAINTAINER Jeff Li <jeff.li@mackenzieinvestments.com>
 
 ARG BBG_CPP_VERSION=3.8.18.1
@@ -43,6 +43,9 @@ RUN conda env create -f /tmp/env-py3.yml
 RUN conda env create -f /tmp/env-py2.yml
 RUN source activate py3 && python -m ipykernel install --user --name py3 --display-name "Python 3" && source deactivate py3
 RUN source activate py2 && python -m ipykernel install --user --name py2 --display-name "Python 2" && source deactivate py2
+
+RUN apt-get clean
+RUN mv -rf /tmp/*
 
 EXPOSE 8888
 
