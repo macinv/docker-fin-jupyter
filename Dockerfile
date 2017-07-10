@@ -15,6 +15,7 @@ RUN apt-get install -y python-dev build-essential gcc libatlas-base-dev libfreet
 RUN apt-get install -y unixodbc unixodbc-dev tdsodbc freetds-dev sqsh
 
 RUN pip install jupyter
+RUN conda install -c conda-forge ipywidgets
 
 # Install Bloomberg C++ API
 RUN wget --directory-prefix=/tmp/ https://bloomberg.bintray.com/BLPAPI-Stable-Generic/blpapi_cpp_$BBG_CPP_VERSION-linux.tar.gz
