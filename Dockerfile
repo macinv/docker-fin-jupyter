@@ -58,4 +58,4 @@ VOLUME /workspace
 
 ENTRYPOINT ["/tini", "--"]
 
-CMD ["jupyter", "notebook", "--allow-root"]
+CMD ["jupyter", "notebook", "--allow-root", "--no-browser", "--ip=0.0.0.0"]
