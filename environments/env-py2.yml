@@ -4,7 +4,7 @@ channels:
   - macinv
 dependencies:
   - python=2.7
-  - blpapi=3.5.5
+  - blpapi=3.9.0
   - pandas
   - numpy
   - scipy
