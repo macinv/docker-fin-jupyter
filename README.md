@@ -11,8 +11,8 @@ Jupyter notebook for Finance
 
 ## Pre-built kernels
 
-* Python 2 (Python 2.7)
-* Python 3 (Python 3.5)
+* Python 2.7
+* Python 3.6
 
 Both kernels come with the following packages preinstalled:
 - pandas

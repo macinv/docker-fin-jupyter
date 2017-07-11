@@ -1,7 +1,9 @@
 name: py3
+
 channels:
   - conda-forge
   - macinv
+
 dependencies:
   - python=3.6
   - blpapi=3.9.0

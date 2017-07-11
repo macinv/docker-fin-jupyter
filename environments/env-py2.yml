@@ -1,7 +1,9 @@
 name: py2
+
 channels:
   - conda-forge
   - macinv
+
 dependencies:
   - python=2.7
   - blpapi=3.9.0
