@@ -9,12 +9,11 @@
 
 Jupyter notebook for Finance
 
-## Pre-built kernels
+## Pre-built kernel
 
-* Python 2.7
 * Python 3.6
 
-Both kernels come with the following packages preinstalled:
+This kernel comes with the following packages preinstalled:
 - pandas
 - blpapi (Bloomberg Open API)
 - numpy
