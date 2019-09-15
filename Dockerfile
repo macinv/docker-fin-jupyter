@@ -13,7 +13,7 @@ RUN pip install jupyter
 RUN conda install -c conda-forge ipywidgets
 
 # install tini
-ENV TINI_VERSION v0.13.1
+ENV TINI_VERSION v0.18.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +x /tini
 
